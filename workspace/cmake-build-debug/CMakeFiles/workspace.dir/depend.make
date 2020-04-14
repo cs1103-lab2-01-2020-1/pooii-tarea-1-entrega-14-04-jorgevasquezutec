@@ -4,5 +4,7 @@
 CMakeFiles/workspace.dir/src/main.cpp.obj: ../src/Tipos.h
 CMakeFiles/workspace.dir/src/main.cpp.obj: ../src/clases/Interger.cpp
 CMakeFiles/workspace.dir/src/main.cpp.obj: ../src/clases/Interger.h
+CMakeFiles/workspace.dir/src/main.cpp.obj: ../src/clases/Number.cpp
+CMakeFiles/workspace.dir/src/main.cpp.obj: ../src/clases/Number.h
 CMakeFiles/workspace.dir/src/main.cpp.obj: ../src/main.cpp
 

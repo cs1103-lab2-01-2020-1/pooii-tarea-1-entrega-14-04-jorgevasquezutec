@@ -12,7 +12,7 @@ private:
 public:
     Interger(int a);
     Interger();
-    ~Interger();
+
     Interger & operator=(int &number);
     Interger & operator=(const Interger & that);
     Interger operator-(const Interger & that);

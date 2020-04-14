@@ -10,9 +10,7 @@ Interger::Interger() {
 Interger::Interger(int a) {
     this->i=a;
 }
-Interger::~Interger() {
 
-}
 Interger& Interger::operator=(const Interger &that) {
     if (this != &that)
     {
