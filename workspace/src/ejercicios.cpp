@@ -8,6 +8,8 @@
 #include "clases/Number.cpp"
 
 
+
+
 void ejercicio5a(){
     cout<<"Ejercicio 5a:"<<endl;
     cout<<"-----------------------------------------------"<<endl;
@@ -41,6 +43,34 @@ void ejercicio5a(){
     cout<<"-----------------------------------------------"<<endl;
 }
 void ejercicio5b(){
+    cout<<"Ejercicio 5a:"<<endl;
+    Number<float > a=3.5;
+    Number<float > b=2.2;
+    cout<<"suma: "<<a<<"+"<<b<<"="<<a+b<<endl;
+    Number<float > c=1.1;
+    c +=b;
+    cout<<"suma acumuladtiva: "<<c<<endl;
+    cout<<"resta: "<<a-b<<endl;
+    Number<float > d=3.5;
+    d -=b;
+    cout<<"resta acumuladtiva: "<<d<<endl;
+    cout<<"Multiplicacion : "<<a*b<<endl;
+    Number<float > e=2.1;
+    e*=a;
+    cout<<"Multiplicacion acumuladtiva: "<<e<<endl;
+    cout<<"Divicion : "<<a/b<<endl;
+    Number<int > f=0;
+    Number<int > j=3;
+    Number<int > k=2;
+    f=j^k;
+    cout<<"Potencia: "<<j<<"^"<<k<<"="<<f<<endl;
+    cout<<">: "<<(a>b)<<endl;
+    cout<<">=: "<<(a>=b)<<endl;
+    cout<<"<: "<<(a<b)<<endl;
+    cout<<"<=: "<<(a<b)<<endl;
+    cout<<"!=: "<<(a!=b)<<endl;
+    cout<<"==: "<<(a==b)<<endl;
+    cout<<"-----------------------------------------------"<<endl;
 }
 void ejercicio6(){
 

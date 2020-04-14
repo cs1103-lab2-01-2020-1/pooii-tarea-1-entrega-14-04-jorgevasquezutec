@@ -5,34 +5,34 @@
 #ifndef WORKSPACE_NUMBER_H
 #define WORKSPACE_NUMBER_H
 
-
 template <typename T>
 class Number {
 private:
     T i;
 public:
-    Number(T a);
     Number();
-    ~Number();
-    Number &operator=(T &number);
-    Number &operator=(const Number &that);
-    Number operator-(const Number &that);
-    Number &operator-=(const Number &that);
-    Number operator+(const Number &that);
-    Number &operator+=(const Number &that);
-    Number operator*(const Number &that);
-    Number &operator*=(const Number &that);
-    Number operator/(const Number &that);
-    Number operator^(const Number &that);
-    bool operator>(const Number &that);
-    bool operator>=(const Number &that);
-    bool operator<(const Number &that);
-    bool operator<=(const Number &that);
-    bool operator!=(const Number &that);
-    bool operator==(const Number &that);
+    Number(T number);
+    operator T();
+    Number& operator=(const Number &other);
+    Number& operator=(T& number);
+    Number operator-(T number);
+    Number operator-=(T number);
+    Number operator+(T number);
+    Number operator+=(T number);
+    Number operator*(T number);
+    Number operator*=(T number);
+    Number operator/(T number);
+    Number operator^(T number);
+    bool operator>(T number);
+    bool operator>=(T number);
+    bool operator<(T number);
+    bool operator<=(T number);
+    bool operator!=(T number);
+    bool operator==(T number);
     static T potenciaRecursiva(T base, T exponente);
-    template<typename U>
-    friend ostream &operator<<(ostream &out, Number<U> &c);
+
+    template <typename U>
+    friend ostream& operator<<(ostream &out, const Number<U> &number);
 
 };
 

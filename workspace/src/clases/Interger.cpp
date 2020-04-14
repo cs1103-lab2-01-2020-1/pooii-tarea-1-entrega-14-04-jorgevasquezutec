@@ -46,15 +46,6 @@ Interger Interger::operator+=(int number) {
 }
 
 
-
-
-
-ostream& operator<<(ostream &out, const Interger &c) {
-    out << c.i;
-    return out;
-}
-
-
 Interger Interger::operator*(int number) {
     return this->i*number;
 }
@@ -69,16 +60,6 @@ Interger Interger::operator/(int number) {
 Interger Interger::operator^(int number) {
     return potenciaRecursiva(this->i,number);
 
-}
-
-int Interger::potenciaRecursiva(int base, int exponente) {
-    if(exponente==0)
-        return 1;
-    if(exponente<0){
-        return 1/(base*potenciaRecursiva(base,exponente-1));
-    }
-    else
-        return base*potenciaRecursiva(base,exponente-1);
 }
 
 bool Interger::operator<(int number) {
@@ -99,4 +80,23 @@ bool Interger::operator!=(int number) {
 }
 bool Interger::operator==(int number) {
     return (this->i==number);
+}
+
+
+
+
+
+int Interger::potenciaRecursiva(int base, int exponente) {
+    if(exponente==0)
+        return 1;
+    if(exponente<0){
+        return 1/(base*potenciaRecursiva(base,exponente-1));
+    }
+    else
+        return base*potenciaRecursiva(base,exponente-1);
+}
+
+ostream& operator<<(ostream &out, const Interger &c) {
+    out << c.i;
+    return out;
 }
