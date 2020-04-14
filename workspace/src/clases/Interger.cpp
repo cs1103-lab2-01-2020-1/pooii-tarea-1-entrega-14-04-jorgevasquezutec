@@ -11,6 +11,11 @@ Interger::Interger(int a) {
     this->i=a;
 }
 
+Interger::operator int()
+{
+    return this->i;
+}
+
 Interger& Interger::operator=(const Interger &that) {
     if (this != &that)
     {
@@ -25,35 +30,47 @@ Interger& Interger::operator=(int &number) {
     }
     return *this;
 }
-Interger Interger::operator-(const Interger &that) {
-        return Interger(this->i-that.i);
+
+Interger Interger::operator-(int number) {
+    return  this->i+number;
 }
-Interger& Interger::operator-=(const Interger &that) {
-        this->i=this->i-that.i;
-        return *this;
+Interger Interger::operator-=(int number) {
+    return this->i -= number;
 }
-Interger Interger::operator+(const Interger &that) {
-        return Interger(this->i+that.i);
+Interger Interger::operator+(int number) {
+    return this->i+number;
 }
 
-Interger& Interger::operator+=(const Interger &that) {
-        this->i=this->i+that.i;
-        return *this;
-}
-Interger Interger::operator*(const Interger &that) {
-    return Interger(this->i*that.i);
-}
-Interger& Interger::operator*=(const Interger &that) {
-    this->i=this->i*that.i;
-    return *this;
-}
-Interger Interger::operator/(const Interger &that) {
-    return Interger(this->i/that.i);
+Interger Interger::operator+=(int number) {
+    return this->i+=number;
 }
 
-Interger Interger::operator^(const Interger &that) {
-    return Interger(potenciaRecursiva(this->i,that.i));
+
+
+
+
+ostream& operator<<(ostream &out, const Interger &c) {
+    out << c.i;
+    return out;
 }
+
+
+Interger Interger::operator*(int number) {
+    return this->i*number;
+}
+
+Interger Interger::operator*=(int number) {
+    return  this->i*=number;
+}
+Interger Interger::operator/(int number) {
+    return  this->i/number;
+}
+
+Interger Interger::operator^(int number) {
+    return potenciaRecursiva(this->i,number);
+
+}
+
 int Interger::potenciaRecursiva(int base, int exponente) {
     if(exponente==0)
         return 1;
@@ -64,27 +81,22 @@ int Interger::potenciaRecursiva(int base, int exponente) {
         return base*potenciaRecursiva(base,exponente-1);
 }
 
-ostream& operator<<(ostream &out, const Interger &c) {
-        out << c.i;
-        return out;
+bool Interger::operator<(int number) {
+    return (this->i<number);
+}
+bool Interger::operator<=(int number) {
+    return (this->i<=number);
+}
+bool Interger::operator>(int number) {
+    return (this->i>number);
+}
+bool Interger::operator>=(int number) {
+    return (this->i>=number);
 }
 
-bool Interger::operator<(const Interger &that) {
-    return (this->i<that.i);
+bool Interger::operator!=(int number) {
+    return (this->i!=number);
 }
-bool Interger::operator<=(const Interger &that) {
-    return (this->i<=that.i);
-}
-bool Interger::operator>(const Interger &that) {
-    return (this->i>that.i);
-}
-bool Interger::operator>=(const Interger &that) {
-    return (this->i>=that.i);
-}
-
-bool Interger::operator!=(const Interger &that) {
-    return (this->i!=that.i);
-}
-bool Interger::operator==(const Interger &that) {
-    return (this->i==that.i);
+bool Interger::operator==(int number) {
+    return (this->i==number);
 }

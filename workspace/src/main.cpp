@@ -7,17 +7,25 @@
 int main() {
     Interger a=6;
     Interger b=2;
-    cout<<"suma: "<<(a+b)<<endl;
-    cout<<"suma acumuladtiva: "<<(a+=b)<<endl;
-    //aqui a vale 8
-    cout<<"resta: "<<(a-b)<<endl;
-    cout<<"resta acumuladtiva: "<<(a-=b)<<endl;
-    //aqui a vale 6
-    cout<<"Multiplicacion : "<<(a*b)<<endl;
-    cout<<"Multiplicacion acumuladtiva: "<<(a*=b)<<endl;
-    //aqui a vale 12
-    cout<<"Divicion : "<<(a/b)<<endl;
-    cout<<"Potencia: "<<(a^b)<<endl;
+    Interger h=a+b;
+    cout<<"suma: "<<a<<"+"<<b<<"="<<h<<endl;
+    Interger c=1;
+    c +=b;
+    cout<<"suma acumuladtiva: "<<c<<endl;
+    cout<<"resta: "<<a-b<<endl;
+    Interger d=3;
+    d -=b;
+    cout<<"resta acumuladtiva: "<<d<<endl;
+    cout<<"Multiplicacion : "<<a*b<<endl;
+    Interger e=5;
+    e*=a;
+    cout<<"Multiplicacion acumuladtiva: "<<e<<endl;
+    cout<<"Divicion : "<<a/b<<endl;
+    Interger f=0;
+    Interger j=3;
+    Interger k=4;
+    f=j^k;
+    cout<<"Potencia: "<<j<<"^"<<k<<"="<<f<<endl;
     cout<<">: "<<(a>b)<<endl;
     cout<<">=: "<<(a>=b)<<endl;
     cout<<"<: "<<(a<b)<<endl;
