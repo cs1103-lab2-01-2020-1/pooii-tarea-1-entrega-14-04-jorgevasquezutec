@@ -6,8 +6,8 @@
 #include "clases/Interger.cpp"
 #include "clases/Number.h"
 #include "clases/Number.cpp"
-
-
+#include "clases/vector.h"
+#include "clases/vector.cpp"
 
 
 void ejercicio5a(){
@@ -74,4 +74,26 @@ void ejercicio5b(){
 }
 void ejercicio6(){
 
+    cout<<"Ejercicio 6:"<<endl;
+    utec::vector prueba(5);
+    utec::vector prueba2(3);
+    utec::vector resultado1;
+    utec::vector resultado2;
+
+    for (size_t i=0 ; i<5;i++){
+        prueba.push_back(i);
+    }
+    for(size_t i=0; i<3;i++){
+        prueba2.push_back(i);
+    }
+    //asignacion
+    resultado1=prueba2;
+    prueba.erase(1);
+    prueba.insert(2,9);
+    prueba.print();
+    resultado1.print();
+    resultado2 = prueba+resultado1;
+    resultado2.print();
+
+    cout<<"-----------------------------------------------"<<endl;
 }
