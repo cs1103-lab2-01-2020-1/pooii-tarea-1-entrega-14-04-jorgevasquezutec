@@ -90,6 +90,7 @@ void ejercicio6(){
     resultado1=prueba2;
     prueba.erase(1);
     prueba.insert(2,9);
+    prueba.pop_back();
     prueba.print();
     resultado1.print();
     resultado2 = prueba+resultado1;
